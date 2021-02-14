@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package decard;
+option go_package = "internal/test";
+
+service Point {
+  rpc SortPoints (Points) returns (Points);
+}
+
+message Points {
+  repeated string Point = 1;
+}
